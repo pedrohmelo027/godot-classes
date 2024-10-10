@@ -10,3 +10,12 @@ position = Vector2(445, 288)
 scale = Vector2(0.847102, 0.842037)
 texture = ExtResource("1_mbrrq")
 script = ExtResource("2_0joha")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 13.0
+offset_top = 9.0
+offset_right = 68.0
+offset_bottom = 46.0
+text = "butão"
+
+[connection signal="pressed" from="Button" to="Sprite2D" method="_on_button_pressed"]
