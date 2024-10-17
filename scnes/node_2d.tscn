@@ -1,0 +1,56 @@
+[gd_scene load_steps=11 format=3 uid="uid://dilymvkch724j"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_diy67"]
+[ext_resource type="Texture2D" uid="uid://blhfmv4xuemmd" path="res://sprites/tapera/frame-1.png" id="1_pcrml"]
+[ext_resource type="Texture2D" uid="uid://4208yw8jlwih" path="res://sprites/tapera/frame-2.png" id="2_fddwf"]
+[ext_resource type="Texture2D" uid="uid://3dyqb38ct2vq" path="res://sprites/tapera/frame-3.png" id="3_r05e3"]
+[ext_resource type="Texture2D" uid="uid://ckoistfeyayix" path="res://sprites/tapera/frame-4.png" id="4_1orrw"]
+[ext_resource type="Texture2D" uid="uid://bxedvltbl1bsb" path="res://sprites/tapera/frame-5.png" id="5_lisur"]
+[ext_resource type="Texture2D" uid="uid://cth1xrixkouxs" path="res://sprites/tapera/frame-6.png" id="6_cmd32"]
+[ext_resource type="Texture2D" uid="uid://d2g6lq3v77ste" path="res://sprites/tapera/frame-7.png" id="7_jiu5v"]
+[ext_resource type="Texture2D" uid="uid://18snxmgw1n4j" path="res://sprites/tapera/frame-8.png" id="8_pjgcm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oa4p3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pcrml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fddwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_r05e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1orrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lisur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_cmd32")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jiu5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pjgcm")
+}],
+"loop": true,
+"name": &"player1",
+"speed": 16.0
+}]
+
+[node name="jogador" type="Node2D"]
+position = Vector2(80, 67)
+script = ExtResource("1_diy67")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(8.58307e-06, 7.62939e-06)
+scale = Vector2(0.185764, 0.185764)
+sprite_frames = SubResource("SpriteFrames_oa4p3")
+animation = &"player1"
+autoplay = "player1"
