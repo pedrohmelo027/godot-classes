@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://t324qnx3l5eg"]
+
+[ext_resource type="Script" path="res://scripts/tiro.gd" id="1_us7ul"]
+[ext_resource type="Texture2D" uid="uid://dpdlrlot14fsx" path="res://sprites/laserBullet.png" id="2_g4nsa"]
+
+[node name="shot" type="Node2D"]
+position = Vector2(26, 166)
+script = ExtResource("1_us7ul")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.71429, 11)
+scale = Vector2(0.628571, 0.645161)
+texture = ExtResource("2_g4nsa")
+offset = Vector2(25, 0)

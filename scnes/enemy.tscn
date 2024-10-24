@@ -1,0 +1,68 @@
+[gd_scene load_steps=14 format=3 uid="uid://b83k8qatg144x"]
+
+[ext_resource type="Script" path="res://scripts/inimigo.gd" id="1_vjcuk"]
+[ext_resource type="Texture2D" uid="uid://785tlv8xoy1p" path="res://sprites/bluebat/skeleton-fly_00.png" id="2_58go2"]
+[ext_resource type="Texture2D" uid="uid://ck8pkchl6kp7h" path="res://sprites/bluebat/skeleton-fly_01.png" id="3_nocc4"]
+[ext_resource type="Texture2D" uid="uid://dkgbnutffgkmc" path="res://sprites/bluebat/skeleton-fly_02.png" id="4_ljmev"]
+[ext_resource type="Texture2D" uid="uid://l4r30le503tj" path="res://sprites/bluebat/skeleton-fly_03.png" id="5_cnr2q"]
+[ext_resource type="Texture2D" uid="uid://c4e0sva0igdtp" path="res://sprites/bluebat/skeleton-fly_04.png" id="6_b36sj"]
+[ext_resource type="Texture2D" uid="uid://dfrwbot1j0tfh" path="res://sprites/bluebat/skeleton-fly_05.png" id="7_7c00y"]
+[ext_resource type="Texture2D" uid="uid://bbosor8mluw8q" path="res://sprites/bluebat/skeleton-fly_06.png" id="8_jwwxx"]
+[ext_resource type="Texture2D" uid="uid://c01nnsbubbhn" path="res://sprites/bluebat/skeleton-fly_07.png" id="9_6ee6p"]
+[ext_resource type="Texture2D" uid="uid://o2bnj30l6n3k" path="res://sprites/bluebat/skeleton-fly_08.png" id="10_aoynw"]
+[ext_resource type="Texture2D" uid="uid://cdi5xiy24nnom" path="res://sprites/bluebat/skeleton-fly_09.png" id="11_che2y"]
+[ext_resource type="Texture2D" uid="uid://kicca1uxy6se" path="res://sprites/bluebat/skeleton-fly_10.png" id="12_3n0tb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_34lwy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_58go2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nocc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ljmev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cnr2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_b36sj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7c00y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_jwwxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6ee6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_aoynw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_che2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3n0tb")
+}],
+"loop": true,
+"name": &"iminigo",
+"speed": 18.0
+}]
+
+[node name="enemy" type="Node2D"]
+position = Vector2(167, 104)
+script = ExtResource("1_vjcuk")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 0)
+scale = Vector2(0.304487, 0.304487)
+sprite_frames = SubResource("SpriteFrames_34lwy")
+animation = &"iminigo"
+autoplay = "iminigo"
+metadata/_edit_group_ = true

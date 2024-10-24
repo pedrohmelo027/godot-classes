@@ -1,0 +1,57 @@
+[gd_scene load_steps=11 format=3 uid="uid://qmg5qnxlhrwg"]
+
+[ext_resource type="Script" path="res://scripts/jogador.gd" id="1_id4ay"]
+[ext_resource type="Texture2D" uid="uid://dui60h2mm707m" path="res://sprites/tapera/frame-1.png" id="2_osvu4"]
+[ext_resource type="Texture2D" uid="uid://vcsosvkbdw6a" path="res://sprites/tapera/frame-2.png" id="3_xyp4d"]
+[ext_resource type="Texture2D" uid="uid://duijermtgthmv" path="res://sprites/tapera/frame-3.png" id="4_xwa8w"]
+[ext_resource type="Texture2D" uid="uid://tm7ejhxmfl8j" path="res://sprites/tapera/frame-4.png" id="5_re5d1"]
+[ext_resource type="Texture2D" uid="uid://jjvxjw56mshm" path="res://sprites/tapera/frame-5.png" id="6_tqmsg"]
+[ext_resource type="Texture2D" uid="uid://culyeiwwfskwb" path="res://sprites/tapera/frame-6.png" id="7_ibuw7"]
+[ext_resource type="Texture2D" uid="uid://csjaoxdofjmtv" path="res://sprites/tapera/frame-7.png" id="8_qwmcb"]
+[ext_resource type="Texture2D" uid="uid://c12x38wtboglj" path="res://sprites/tapera/frame-8.png" id="9_mjuy7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dgd8f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_osvu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xyp4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_xwa8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_re5d1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tqmsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ibuw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_qwmcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mjuy7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 18.0
+}]
+
+[node name="player" type="Node2D"]
+position = Vector2(396, 204)
+script = ExtResource("1_id4ay")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-71, 0)
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_dgd8f")
+autoplay = "default"
+frame = 6
+frame_progress = 0.734199
